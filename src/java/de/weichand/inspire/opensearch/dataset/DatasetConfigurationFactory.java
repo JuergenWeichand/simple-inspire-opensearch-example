@@ -3,6 +3,7 @@ package de.weichand.inspire.opensearch.dataset;
 import de.weichand.inspire.opensearch.dataset.iface.ISimpleDatasetConfiguration;
 import de.weichand.inspire.opensearch.dataset.impl.Dgm200Impl;
 import de.weichand.inspire.opensearch.dataset.impl.Dtk500Impl;
+import de.weichand.inspire.opensearch.dataset.impl.VerwaltungsgrenzenImpl;
 import de.weichand.inspire.opensearch.exception.OpenSearchException;
 
 /**
@@ -20,6 +21,9 @@ public class DatasetConfigurationFactory {
         if (alias.toLowerCase().equals("dtk500")) {
             return new Dtk500Impl();
         }        
+        if (alias.toLowerCase().equals("verwaltungsgrenzen")) {
+            return new VerwaltungsgrenzenImpl();
+        }       
         
         throw new OpenSearchException("Dataset " + alias + " not found!");        
     }
