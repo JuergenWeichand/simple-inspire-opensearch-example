@@ -106,6 +106,6 @@ public class OpenSearchServlet extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Simples Beispiel für Pre-defined Atom OpenSearch";
+        return "Pre-defined Atom OpenSearch";
     }// </editor-fold>
 }
